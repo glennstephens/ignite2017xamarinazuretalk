@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MyFavSpots.SigninPage" BackgroundColor="White">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="CenterAndExpand" Padding="30,35">
+			<Image Source="MainIcon.png" WidthRequest="200" HeightRequest="200"></Image>
+
+			<Label Margin="0,10" HorizontalTextAlignment="Center" FontFamily="Noteworthy-Bold" FontSize="35" Text="My Fav Spots">
+				<Label.FontFamily>
+					<OnPlatform x:TypeArguments="x:String">
+						<OnPlatform.iOS>Noteworthy-Bold</OnPlatform.iOS>
+						<OnPlatform.Android>cursive</OnPlatform.Android>
+					</OnPlatform>
+				</Label.FontFamily>
+			</Label>
+			
+			<Label HorizontalTextAlignment="Center" FontSize="Micro">This app lets you store your favorite locations and share them with those around you</Label>
+			<Label HorizontalTextAlignment="Center" FontSize="Micro">Sign in with your Facebook account to get started</Label>
+
+			<Button Margin="0,20" Text="Facebook Sign-in" Clicked="PerformLogin"></Button>
+
+			<Label Text=""/>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

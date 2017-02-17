@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="MyFavSpots.DisplaySpotsPage"
+		Title="My Fav Spots">
+	
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Icon="CameraIcon.png" Clicked="AddNewPhoto" x:Name="takePhotoButton"></ToolbarItem>
+		<ToolbarItem Icon="PickFromLibrary" Clicked="AddNewLibraryImage" x:Name="chooseImageButton"></ToolbarItem>
+	</ContentPage.ToolbarItems>
+
+	<StackLayout>
+		<SearchBar x:Name="searchFor" Placeholder="Search for..." SearchButtonPressed="SearchForSpots" VerticalOptions="Fill"></SearchBar>
+		<ListView RowHeight="180" x:Name="spotList" CachingStrategy="RecycleElement" ItemTapped="ShowSelectedItem" IsPullToRefreshEnabled="true" Refreshing="Handle_Refreshing" />
+	</StackLayout>
+</ContentPage>

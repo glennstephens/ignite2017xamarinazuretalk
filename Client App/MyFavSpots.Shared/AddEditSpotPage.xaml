@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		Title="{Binding Name}"
+		x:Class="MyFavSpots.AddEditSpotPage">
+	<ContentPage.Content>
+		<ScrollView>
+			<StackLayout Padding="0" x:Name="mainLayout">
+				<ScrollView>
+					<StackLayout Padding="20">
+						<Label Text="Name"></Label>
+						<Entry Placeholder="Name" Text="{Binding Name}"></Entry>
+
+						<Label Text="Description"></Label>
+						<Entry Placeholder="Description" Text="{Binding Description}"></Entry>
+
+						<Label Text="Address"></Label>
+						<Entry Placeholder="Address" Text="{Binding Address}"></Entry>
+
+						<Label Text="{Binding RatingOutOfFive, StringFormat='Rating: {0}/5'}"></Label>
+						<Slider Minimum="0" Maximum="5" Value="{Binding RatingOutOfFive}"></Slider>
+						
+						<Label Text="Category"></Label>
+						<Entry Text="{Binding Category}" Placeholder="Category" />
+
+						<Button Margin="0, 20" Text="Save your new spot" Clicked="SaveSpot"></Button>
+					</StackLayout>
+				</ScrollView>
+			</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>

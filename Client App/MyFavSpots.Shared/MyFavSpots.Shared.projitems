@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{E302B522-B8F5-4740-AD80-08DF5DBC0E6B}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>MyFavSpots.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)DTOs\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Services\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Cells\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)DTOs\FavouriteSpot.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\AzureSqlSpotsDataService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ISpotsDataService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MockDataService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AddEditSpotPage.xaml.cs">
+      <DependentUpon>AddEditSpotPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)DisplaySpotsPage.xaml.cs">
+      <DependentUpon>DisplaySpotsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SigninPage.xaml.cs">
+      <DependentUpon>SigninPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Cells\BaseInfoCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cells\FavSpotCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DisplayLocationDetailsPage.xaml.cs">
+      <DependentUpon>DisplayLocationDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)AuthStorage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\AzureOfflineSpotsDataService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IShowInProgressDialog.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MobileServiceClientConstants.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)AddEditSpotPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)DisplaySpotsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SigninPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)DisplayLocationDetailsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MyFavSpots.App">
+	<Application.Resources>
+		<ResourceDictionary>
+			<x:String x:Key="coreFont">Avenir-Light</x:String>
+			
+			<!-- Implicit Styles -->
+			<Style TargetType="Label">
+				<Setter Property="FontFamily" Value="{StaticResource coreFont}" />
+			</Style>
+
+			<Style TargetType="Button">
+				<Setter Property="FontFamily" Value="{StaticResource coreFont}" />
+				<Setter Property="TextColor" Value="White" />
+				<Setter Property="BackgroundColor" Value="#4E50AB" />
+				<Setter Property="BorderRadius" Value="5" />
+				<Setter Property="HeightRequest" Value="45" />
+				<Setter Property="HorizontalOptions" Value="FillAndExpand" />
+			</Style>
+			
+			<Style TargetType="Entry">
+				<Setter Property="FontFamily" Value="{StaticResource coreFont}" />
+			</Style>
+
+			<!-- Label Styles -->
+			<Style x:Key="coreLabelStyle" TargetType="Label">
+				<Setter Property="FontFamily" Value="Avenir-Light" />
+			</Style>
+			<Style x:Key="infoLabelStyle" BasedOn="{StaticResource coreLabelStyle}" TargetType="Label">
+				<Setter Property="FontSize" Value="Small" />
+			</Style>
+
+			<!--- Base Info Styles -->
+			<Style x:Key="infoCellTitleLabel" TargetType="Label">
+				<Setter Property="FontFamily" Value="Avenir-Medium" />
+				<Setter Property="FontSize" Value="Medium" />
+				<Setter Property="TextColor" Value="White" />
+			</Style>
+			<Style x:Key="infoCellSubDetailLabel" TargetType="Label">
+				<Setter Property="FontFamily" Value="Avenir-Light" />
+				<Setter Property="FontSize" Value="Micro" />
+				<Setter Property="TextColor" Value="#C8C8C8" />
+			</Style>
+			
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>
